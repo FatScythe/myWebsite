@@ -1,0 +1,434 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Roboto:wght@300;400;700&display=swap');
+
+::selection {
+	background: limegreen;
+	color: #fff;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto', sans-serif;
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+.container {
+	width: 85%;
+	margin: 0 auto;
+}
+
+a {
+	text-decoration: none;
+	color: #fff;
+}
+
+.active {
+	background: #04A66D;
+	padding: 10px 15px;
+	border-radius: 3px;
+}
+
+.card {
+	border-radius: 33px;
+	background: #fff;
+	 background-color: #afd275;
+  	box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.25), -8px -8px 12px 0 rgba(255, 255, 255, 0.3); 
+	padding: 15px 10px; 
+	height: 100%;
+}
+
+/*-----------------------HEADER------------------------------*/
+
+header {
+	background-image: linear-gradient( to bottom right, rgba(43, 227, 91, 0.2), rgba(0 , 0, 0, 0.2)), url('../image/banner.jpg');
+	background-position: center;
+	background-size: contain;
+	height: 50vh;
+	color: #000;
+}
+
+/*------------NAV-----------------*/
+
+header nav {
+ 	display: grid;
+ 	justify-content: space-between;
+ 	align-content: center;
+ 	grid-template-columns: repeat(2,1fr); 
+}
+
+header nav {
+	padding: 2% 3%;
+}
+
+header nav .logo {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+header nav .logo img {
+	width: 50px;
+	height: 50px;
+	margin-right: 10px;
+	border-radius: 50%;
+}
+
+header nav .logo h1 a {
+	font-family: 'Dancing Script', cursive;
+	font-size: 3rem;
+}
+
+
+header nav .nav_menu {
+	justify-self: flex-end;
+	align-self: center;
+} 
+
+header nav .nav_menu ul li {
+	display: inline-block;
+	position: relative;
+}
+
+header nav .nav_menu ul li a {
+	color: #fff;
+	padding: 10px;
+}
+
+header nav .nav_menu ul li a::after {
+	position: absolute;
+	content: "";
+	height: 2px;
+	border-radius: 3px;
+	background-color: #04AA6D;
+	bottom: -5px;
+	left: 0;
+	width: 0;
+	transition: width 0.4s ease-in-out;
+}
+
+header nav .nav_menu ul li a:hover::after {
+	width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+	header {
+		text-align: center;
+	}
+	
+	header nav {
+ 		justify-content: center;
+ 		grid-template-columns: 1fr; 
+	}
+
+	header nav .logo {
+		align-self: center;
+		justify-content: center;
+	}	
+}
+
+/*-----------------------HERO------------------------------*/
+
+header .hero {
+	text-align: center;
+}
+
+header .hero h1 {
+	font-weight: 700;
+	font-size: 3.5rem;
+}
+
+header .hero p {
+	margin-top: 1rem;
+	font-size: 1.5rem;
+}
+
+/*-----------------------SERVICES------------------------------*/
+
+.services {
+	padding: 2rem 0;
+	background:  #afd275;
+	height: 100%;
+}
+
+.services h1 {
+	text-align: center;
+}
+
+.services .container {
+	width: 80%;
+	display: grid;
+	grid-template-columns: repeat(3,1fr);
+	justify-content: center;
+	align-content: center;
+	gap: 2rem;
+}
+
+.services div p {
+	text-align: center;
+}
+
+/*-----------------------ABOUT------------------------------*/
+
+.about {
+	padding: 2rem 0;
+	background:  #f1f1f1;
+	height: 100%;
+}
+
+.about h1 {
+	text-align: center;
+}
+
+.about .container .grid {
+	display: grid;
+	grid-template-columns: repeat(2,1fr);
+	justify-content: space-between;
+	align-content: center;
+	gap: 1rem;
+}
+
+.about .container .grid div:first-child img {
+	width: 300px;
+	height: 300px;
+	border-radius: 10px;
+}
+
+.about .container .grid div:last-child {
+	text-align: right;
+	font-size: 1rem;
+}
+
+/*-----------------------FORM AND SEARCH------------------------------*/
+
+.form {
+	padding: 2rem 0;
+	background: #fff;
+	height: 100%;
+}
+
+.form .container {
+	display: grid;
+	grid-template-columns: repeat(2,1fr);
+	justify-content: space-between;
+	align-content: center;
+	gap: 2rem;
+}
+
+/*----------CONTACT FORM-----------------*/
+
+.form .container div:first-child input[type=text] , input[type=email] , textarea {
+	display: inline-block;
+	width: 80%;
+	border: none;
+	outline: none;
+	padding: 10px;
+	font-size: 1rem;
+	resize: vertical;
+	background: #ccc;
+}
+
+.btn {
+	border: 1px solid #000;
+	padding: 10px 15px;
+	transition: transform 0.5s ease;
+	cursor: pointer;
+}
+
+.btn:hover {
+	transform: scale(0.95);
+	background: lightgreen;
+}
+
+.form .container div:last-child {
+	/*justify-self: center;*/
+}
+
+/*----------SEARCH-----------------*/
+ .form .container div:last-child .search input[type=text] {
+ 	border-radius: 4px;
+ 	width: 140px;
+ 	background-color: lightgray;
+ 	background-image: url(../image/search.png);
+ 	background-size: contain;
+ 	background-repeat: no-repeat;
+ 	font-size: 1rem;
+ 	padding: 10px 5px 10px 50px;
+ 	background-position: left;
+ 	transition: width 0.5s ease; 
+ }
+
+ .search .btn {
+ 	border: none;
+ 	border-radius: 6px;
+ 	background: blue;
+ 	color: #fff;
+ 	transition: transform 0.5s ease;
+ }
+
+ .search .btn:hover {
+ 	transform: scale(0.95);
+ 	background: blue;
+ }
+
+.form .container div:last-child .search input[type=text]:focus {
+	width: 100%;
+}
+
+/*----------LOGIN-----------------*/
+
+#login {
+	background: #d0f7dc;
+	border-radius: 10px;
+	padding: 10px;
+	height: 80%;
+}
+
+#login h1 {
+	text-align: center;
+}
+
+#login h2 {
+	text-align: center;
+}
+
+#login .social {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+#login .social .fa {
+	color: #fff;
+	padding-right: 10px;
+}
+
+/*FACEBOOK*/
+
+#login .social div:first-child {
+	background: #1F51FF;
+	padding: 10px 20px;
+	border-radius: 5px;
+}
+
+#login .social div:first-child p {
+	font-size: 1.5rem;
+	font-weight: bold;
+	color: #fff;
+}
+
+/*GOOGLE*/
+
+#login .social div:last-child {
+	background: #fff;
+	padding: 10px 20px;
+	border-radius: 5px;
+}
+
+#login .social div:last-child p span {
+	font-size: 1.5rem;
+	font-weight: bold;
+	color: #000;
+}
+
+#login .social div:last-child img {
+	margin-right: 10px;
+	border-radius: 50%;
+}
+
+#login form  input[type=text], input[type=password] {
+	display: inline-block;
+	width: 100%;
+	outline: none;
+	border: none;
+	font-size: 1.2rem;
+	padding: 0.5rem;
+
+}
+
+#login form label {
+	font-size: 1.2rem;
+	font-weight: bold;
+}
+
+#login form a {
+	text-decoration: underline;
+	color: #333;
+}
+
+#login form .btn {
+	width: 100%;
+	color: #fff;
+	font-size: 1rem;
+	background: #000;
+	border-radius: 5px;
+	padding: 15px 20px;
+}
+
+#login form .not {
+	text-align: center;
+	font-size: 1.2rem;
+	font-weight: bold;
+	color: #333;
+}
+
+/*-----------------------FOOTER------------------------------*/
+
+footer {
+	height: 100%;
+	padding: 1rem;
+	color: #fff;
+	background: #0b521e;
+}
+
+footer .container {
+ 	display: flex;
+ 	justify-content: space-between;
+ 	align-items: center;
+ }
+
+ footer div nav ul {
+ 	list-style: none;
+ }
+
+ footer div nav ul li {
+ 	padding-bottom: 15px;
+ }
+
+ footer div .icon .fa {
+ 	color: #fff;
+ 	font-size: 35px;
+ 	margin-left: 20px;
+ }
+
+ @media screen and (max-width: 768px) {
+ 	footer {
+ 		height: 100%;
+ 	}
+
+ 	footer .container {
+ 		flex-direction: column;
+ 		align-items: flex-start;
+ 	}
+
+ 	footer div nav ul {
+ 		margin-top: 40px;
+ 	}
+
+ 	footer div .icon .fa {
+ 		margin-top: 40px;	
+ 	}
+ }
+
+  @media screen and (max-width: 500px) {
+ 	footer {
+ 		height: 60vh;
+ 	}
+
+ 	footer div .icon .fa {
+ 		font-size: 25px;
+ 	}
+ }
