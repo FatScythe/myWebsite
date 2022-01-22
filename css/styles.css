@@ -47,6 +47,7 @@ header {
 	background-image: linear-gradient( to bottom right, rgba(43, 227, 91, 0.2), rgba(0 , 0, 0, 0.2)), url('../image/banner.jpg');
 	background-position: center;
 	background-size: contain;
+	background-repeat: no-repeat;
 	height: 100%;
 	color: #000;
 	padding: 2rem 0;
@@ -331,21 +332,6 @@ header .hero p {
 	width: 100%;
 }
 
-@media screen and (max-width: 768px) {
-	.form .container {
-		grid-template-columns: 1fr;
-		justify-content: center;
-	}
-
-	.form .container div:first-child input[type=text] , input[type=email] , textarea {
-		width: 100%;
-	}
-
-	.form .container div:last-child .search input[type=text] {
-	 	width: 300px;
-	 }
-}
-
 /*----------LOGIN-----------------*/
 
 #login {
@@ -441,6 +427,81 @@ header .hero p {
 	font-size: 1.2rem;
 	font-weight: bold;
 	color: #333;
+}
+
+@media screen and (max-width: 768px) {
+	.form .container {
+		grid-template-columns: 1fr;
+		justify-content: center;
+	}
+
+	.form .container div:first-child input[type=text] , input[type=email] , textarea {
+		width: 100%;
+	}
+
+	.form .container div:last-child .search input[type=text] {
+	 	width: 140px;
+	}
+}
+
+@media screen and (max-width: 500px) {
+
+	/*header*/
+
+	header {
+		background-size: cover;
+	}
+
+	header nav .nav_menu ul li {
+		color: #fff;
+		margin: 10px 10px 20px 10px;
+	}
+
+	#login {
+		padding: 5px;
+	}
+
+	/*FACEBOOK*/
+
+	#login .social div:first-child {
+		padding: 10px 15px;
+	}
+
+	#login .social div:first-child p {
+		font-size: 1rem;
+	}
+
+	/*GOOGLE*/
+
+	#login .social div:last-child {
+		padding: 10px 15px;
+	}
+
+	#login .social div:last-child p span {
+		font-size: 1rem;
+	}
+
+	#login .social div:last-child img {
+		height: 15px;
+		width: 15px;
+	}
+
+	#login form  input[type=text], input[type=password] {
+		font-size: 1rem;
+	}
+
+	#login form label {
+		font-size: 1rem;
+	}
+
+	#login form .btn {
+		padding: 10px 15px;
+	}
+
+	#login form .not {
+		font-size: 1rem;
+	}
+
 }
 
 /*-----------------------FOOTER------------------------------*/
