@@ -1,0 +1,5 @@
+HTML pastebin link : https://pastebin.pl/view/9af947e1
+
+CSS pastebin link : https://pastebin.pl/view/b1679ccd
+
+Live Site: https://fatscythe.github.io/myWebsite/index.html
